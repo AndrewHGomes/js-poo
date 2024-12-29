@@ -8,6 +8,8 @@ const pet = {
 console.log(pet.nome);
 pet.latir();
 
+console.log("");
+
 //-----------------------------------------------
 
 const pessoa = {
@@ -25,3 +27,32 @@ const pessoa = {
 console.log(pessoa.getNome());
 pessoa.setNome("Viviane");
 console.log(pessoa.getNome());
+
+console.log("");
+
+//-------------------------------------------------
+
+const livro = {
+  titulo: "As seis lições",
+  paginas: 198,
+  publicado: true,
+  noEstoque: 25,
+  tags: ["Política", "Economia", "Ciências Políticas"],
+  autor: {
+    nome: "Ludwig Von Mises",
+  },
+
+  addEstoque(quantidade) {
+    this.noEstoque += quantidade;
+  },
+
+  salvar: function () {
+    console.log("Foi salvo no DB");
+  },
+};
+
+livro.addEstoque(21);
+
+console.log(livro);
+
+console.log("");
